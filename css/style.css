@@ -1,0 +1,289 @@
+html, body, div, iframe, form {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	background-color: #272822;
+	color: #bbb;
+}
+
+sup {
+	background: #e44;
+	color: #fff;
+	padding: 1px 2px 1px 2px;
+	border-radius: 3px;
+	font-size: 0.5em;
+}
+
+footer {
+	background-color: #1a1c1d;
+	padding: 20px;
+	text-align: center;
+}
+
+a {
+	color: #AD5CFF;
+}
+
+a, a:hover, a:active, a:focus {
+	outline: 0;
+	text-decoration: none;
+}
+
+#konten {
+	display: block;
+	width: 100%;
+}
+
+.per-dua {
+	display: inline-block;
+	width: 50%;
+}
+
+.code-php .CodeMirror {
+	line-height: 1.3;
+	height: 561px;
+	text-align: left;
+	width: 100%;
+	border-bottom: 2px solid #555;
+}
+
+.code-html .CodeMirror {
+	line-height: 1.3;
+	height: 159px;
+	text-align: left;
+	width: 100%;
+	border-bottom: 2px solid #555;
+}
+
+.code-sql .CodeMirror {
+	line-height: 1.3;
+	height: 448px;
+	text-align: left;
+	width: 100%;
+	border-bottom: 2px solid #555;
+}
+
+.CodeMirror-linenumbers {
+	padding: 0 8px;
+}
+
+span.title {
+	display: inline-block;
+	font-weight: bold;
+	color: #bbb;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+a.opencdn {
+	background: #000;
+	font-weight: bold;
+	font-size: 1em;
+	color: #bbb;
+	padding: 0px 5px 0px 5px;
+	border-radius: 3px;
+}
+
+span#add , span#remove {
+	font-weight: bold;
+	font-size: 2em;
+	color: #bbb;
+	padding: 0px 5px 0px 5px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.btn-preview {
+	background: #339452;
+	color: #fff;
+	border: none;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+	float: right;
+}
+
+input[type=text],
+input[type=password] {
+	box-sizing: border-box;
+}
+
+input.db-input {
+	display: block;
+	width: 100%;
+	color: #7c90ec;
+	background: #333;
+	border: none;
+	border-bottom: 2px solid #1a1c1d;
+	padding: 5px;
+}
+
+input.cdn-input {
+	display: inline-block;
+	width: 80%;
+	color: #222;
+	background: #ffff;
+	border: 1px solid #aaa;
+	padding: 5px;
+}
+
+.code-php, .code-html, .code-sql {
+	background: #1a1c1d;
+}
+
+iframe {
+	background: #fff;
+	width: 100%;
+	height: 600px;
+	border-bottom: 2px solid #555;
+}
+
+iframe.cmd {
+	background: #000;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999999999;
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: auto;
+	max-width: 400px;
+	min-width: 250px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	background: #fff;
+	text-align: center;
+}
+
+.modalDialog  h2 {
+	color: #555;
+	border-bottom: 2px solid #aaa;
+	padding-bottom: 10px;
+}
+
+#cdn {
+	margin-bottom: 50px;
+}
+
+.close {
+	background: #47CF73;
+	color: #fff;
+	font-weight: bold;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	outline: 0;
+	padding: 10px 16px;
+	border-radius: 3px;
+	border: 3px solid transparent;
+	cursor: pointer;
+}
+
+.close:hover {
+	background: #339452;
+}
+
+ul.header {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #000;
+	border-bottom: 2px solid #555;
+}
+
+ul.header li {
+	float: left;
+}
+
+ul.header li a {
+	display: inline-block;
+	color: #bbb;
+	text-align: center;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+ul.header li input, ul.header li select {
+	background-color: #111;
+	border: none;
+	display: inline-block;
+	color: #bbb;
+	padding: 12px 16px;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+ul.header li.katuhu {
+	float: right;
+}
+
+ul.header li a:hover, ul.header li a.active {
+	background-color: #111;
+}
+
+#stack_output {
+	position: absolute;
+	background: #000;
+	height: auto;
+	max-height: 500px;
+	overflow: auto;
+	overflow-x: hidden;
+	z-index: 99999999999;
+	display: none;
+	padding: 10px;
+}
+
+#stack_output a {
+	text-align: left;
+	display: block;
+}
+
+@media screen and (max-width:390px) {
+	ul.header li {
+		width: 50%;
+		display: inline-block;
+	}
+
+	ul.header li.katuhu {
+		display: block;
+		width: 100%;
+		float: none;
+	}
+
+	ul.header li input, ul.header li select {
+		display: block;
+		width: 100%;
+	};
+}
