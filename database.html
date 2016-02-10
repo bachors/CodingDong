@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Title -->
+		<title>Database - CodingDong</title>
+		
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Database - CodingDong" />
+		<meta property="og:description" content="Free code editor, web builder, code execute web based." />
+		<meta property="og:image" content="http://ibacor.com/bcr_asset/images/media/37407c7e5e6b35f44f58fd7956cad13b.jpg" />
+		<meta property="og:url" content="http://ibacor.com/codingdong/database.html" />
+		<meta property="og:site_name" content="iBacor" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/codemirror.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/dialog/dialog.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/theme/monokai.min.css">
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body>	
+		<ul class="header">
+			<li><a href="index.html">CodingDong <sup>BETA</sup></a></li>
+			<li><a href="frontend.html">Frontend</a></li>
+			<li><a href="backend.html">Backend</a></li>
+			<li><a class="active" href="database.html">Database</a></li>
+			<li class="katuhu">
+				<input type="text" id="stack_title" title="Keyword" placeholder="Stackoverflow"/>
+				<select class="stack_sort">
+					<option value="activity">Activity</option>
+					<option value="votes">Votes</option>
+					<option value="creation">Creation</option>
+					<option value="relevance">Relevance</option>
+				</select>
+				<div id="stack_output">Search a question and the results will display here.</div>
+			</li>
+		</ul>		
+		<div id="konten">
+			<div class="per-dua code-sql">
+				<form method="post" action="eksekusi.php" target="output">
+					<span class="title">MYSQL</span>
+					<input type="submit" name="preview" class="btn-preview" value="Go"/>
+					<input type="text" name="host" class="db-input" placeholder="Host *" required/>
+					<input type="text" name="username" class="db-input" placeholder="Username *" required/>
+					<input type="text" name="password" class="db-input" placeholder="Password *"/>
+					<input type="text" name="dbname" class="db-input" placeholder="DB name"/>
+					<textarea id="code" name="query" placeholder="CREATE DATABASE dbname;"></textarea>
+				</form>
+			</div><div class="per-dua"><iframe name="output" class="cmd" src="eksekusi.php"></iframe></div>			
+		</div>
+		<footer>Developed by <a href="http://ibacor.com" target="_BLANK">iBacor</a>. Build with <a href="https://codemirror.net/" target="_BLANK">CodeMirror</a>. Made with &hearts; in Garut, Indonesia. </footer>
+		
+		<!-- Javascript -->
+		<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="js/ibacor_stack.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/codemirror.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/xml/xml.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/javascript/javascript.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/css/css.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/sql/sql.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/htmlmixed/htmlmixed.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/dialog/dialog.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/search/searchcursor.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/search/search.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/display/placeholder.js"></script>
+		<script>					 
+			var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+				mode: 'text/x-mysql', lineNumbers: true, lineWrapping: true, theme: "monokai"
+			});
+		</script>
+		
+		<!-- Fork me on GitHub -->
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css" />
+		<div class="github-fork-ribbon-wrapper right-bottom">
+			<div class="github-fork-ribbon">
+				<a href="https://github.com/bachors/CodingDong">Fork me on GitHub</a>
+			</div>
+		</div>
+
+	</body>
+</html>
